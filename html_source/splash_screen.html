@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+
+
+<html class="dark" lang="en"><head>
+
+<meta charset="utf-8"/>
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<title>Catatan Belajar - Splash Screen</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<script id="tailwind-config">
+
+        tailwind.config = {
+
+            darkMode: "class",
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        "primary": "#135bec",
+
+                        "background-light": "#f6f6f8",
+
+                        "background-dark": "#101622",
+
+                    },
+
+                    fontFamily: {
+
+                        "display": ["Lexend", "Noto Sans", "sans-serif"]
+
+                    },
+
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+
+                },
+
+            },
+
+        }
+
+    </script>
+
+<style>
+
+        /* Custom subtle pulsing animation for the logo */
+
+        @keyframes pulse-glow {
+
+            0%, 100% {
+
+                box-shadow: 0 0 15px -5px rgba(19, 91, 236, 0.3);
+
+            }
+
+            50% {
+
+                box-shadow: 0 0 25px 5px rgba(19, 91, 236, 0.5);
+
+            }
+
+        }
+
+        .logo-glow {
+
+            animation: pulse-glow 3s infinite ease-in-out;
+
+        }
+
+    </style>
+
+<style>
+
+    body {
+
+      min-height: max(884px, 100dvh);
+
+    }
+
+  </style>
+
+  </head>
+
+<body class="bg-background-light dark:bg-background-dark font-display antialiased overflow-hidden">
+
+<div class="relative flex h-screen w-full flex-col justify-between items-center p-6">
+
+<!-- Spacer for vertical centering logic -->
+
+<div class="flex-1"></div>
+
+<!-- Central Content Area -->
+
+<div class="flex flex-col items-center justify-center w-full max-w-xs animate-fade-in-up">
+
+<!-- Logo Container (Adapted from ImageGrid idea but simplified for single hero logo) -->
+
+<div class="mb-8 relative">
+
+<div class="w-32 h-32 rounded-3xl bg-gradient-to-br from-primary to-[#0f4ac4] flex items-center justify-center logo-glow relative z-10 shadow-xl" data-alt="Stylized abstract notebook logo icon">
+
+<span class="material-symbols-outlined text-white text-[64px] drop-shadow-md">
+
+                        menu_book
+
+                    </span>
+
+</div>
+
+<!-- Decorative background blur element behind logo -->
+
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-primary/20 blur-[50px] rounded-full -z-0"></div>
+
+</div>
+
+<!-- Headlines -->
+
+<div class="text-center space-y-1 z-10">
+
+<!-- Main Title -->
+
+<h1 class="text-gray-900 dark:text-white tracking-tight text-[36px] font-bold leading-tight">
+
+                    Catatan Belajar
+
+                </h1>
+
+<!-- Subtitle / Tagline -->
+
+<h2 class="text-primary tracking-wide uppercase text-sm font-bold pt-2">
+
+                    Offline
+
+                </h2>
+
+</div>
+
+</div>
+
+<!-- Bottom Section: Loading & Meta -->
+
+<div class="flex-1 flex flex-col justify-end w-full max-w-xs pb-8 gap-6">
+
+<!-- Loading Indicator (ProgressBar) -->
+
+<div class="w-full flex flex-col gap-2">
+
+<div class="flex justify-between items-end px-1">
+
+<span class="text-xs text-gray-500 dark:text-gray-400 font-medium">Loading resources...</span>
+
+<span class="text-xs text-primary font-bold">85%</span>
+
+</div>
+
+<div class="h-1.5 w-full rounded-full bg-gray-200 dark:bg-[#1e2636] overflow-hidden">
+
+<div class="h-full rounded-full bg-primary" style="width: 85%;"></div>
+
+</div>
+
+</div>
+
+<!-- Meta / Version Text -->
+
+<div class="text-center">
+
+<p class="text-gray-400 dark:text-[#58627a] text-xs font-normal">
+
+                    v1.0 - Designed for Focus
+
+                </p>
+
+</div>
+
+</div>
+
+</div>
+
+</body></html>
+
+
+
+
+
+
+
+
+

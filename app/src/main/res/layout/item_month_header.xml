@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/monthText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="4dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:textSize="10sp"
+    android:textStyle="bold"
+    android:textAllCaps="true"
+    android:textColor="?attr/colorOnSurfaceVariant"
+    android:letterSpacing="0.1"
+    android:background="?android:attr/colorBackground"/>
+

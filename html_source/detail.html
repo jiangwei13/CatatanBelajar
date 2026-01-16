@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+
+<meta charset="utf-8"/>
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<title>Detail Catatan</title>
+
+<!-- Tailwind CSS -->
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<!-- Google Fonts -->
+
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+
+<!-- Material Symbols -->
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<!-- Theme Configuration -->
+
+<script id="tailwind-config">
+
+        tailwind.config = {
+
+            darkMode: "class",
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        "primary": "#135bec",
+
+                        "background-light": "#f6f6f8",
+
+                        "background-dark": "#101622",
+
+                    },
+
+                    fontFamily: {
+
+                        "display": ["Lexend", "sans-serif"]
+
+                    },
+
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+
+                },
+
+            },
+
+        }
+
+    </script>
+
+<style>
+
+        /* Custom scrollbar for better look in webview */
+
+        ::-webkit-scrollbar {
+
+            width: 0px;
+
+            background: transparent;
+
+        }
+
+        body {
+
+            -webkit-tap-highlight-color: transparent;
+
+        }
+
+    </style>
+
+<style>
+
+    body {
+
+      min-height: max(884px, 100dvh);
+
+    }
+
+  </style>
+
+  </head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased transition-colors duration-200">
+
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden pb-6">
+
+<!-- TopAppBar -->
+
+<div class="sticky top-0 z-50 flex items-center justify-between bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md px-4 py-3 border-b border-slate-200 dark:border-slate-800">
+
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors group">
+
+<span class="material-symbols-outlined text-slate-900 dark:text-white group-hover:text-primary transition-colors" style="font-size: 24px;">arrow_back_ios_new</span>
+
+</button>
+
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">Detail Catatan</h2>
+
+<button class="flex h-10 px-3 items-center justify-center rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-primary font-medium text-sm">
+
+                Edit
+
+            </button>
+
+</div>
+
+<!-- Main Content -->
+
+<main class="flex-1 px-5 pt-4 flex flex-col gap-6">
+
+<!-- HeadlineText & Status -->
+
+<div class="flex flex-col gap-3">
+
+<div class="inline-flex">
+
+<span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 dark:bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/20">
+
+<span class="material-symbols-outlined filled text-[16px]">check_circle</span>
+
+                        Paham Sepenuhnya
+
+                    </span>
+
+</div>
+
+<h1 class="text-3xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white">
+
+                    Intro to Calculus: Limits &amp; Derivatives
+
+                </h1>
+
+</div>
+
+<!-- Chips / Meta Data -->
+
+<div class="flex flex-wrap gap-3">
+
+<div class="flex items-center gap-2 rounded-lg bg-white dark:bg-[#282e39] px-3 py-2 shadow-sm border border-slate-100 dark:border-slate-700">
+
+<span class="material-symbols-outlined text-primary" style="font-size: 20px;">calendar_today</span>
+
+<p class="text-sm font-medium text-slate-600 dark:text-slate-300">12 Oct 2023</p>
+
+</div>
+
+<div class="flex items-center gap-2 rounded-lg bg-white dark:bg-[#282e39] px-3 py-2 shadow-sm border border-slate-100 dark:border-slate-700">
+
+<span class="material-symbols-outlined text-primary" style="font-size: 20px;">schedule</span>
+
+<p class="text-sm font-medium text-slate-600 dark:text-slate-300">45 Mins</p>
+
+</div>
+
+<div class="flex items-center gap-2 rounded-lg bg-white dark:bg-[#282e39] px-3 py-2 shadow-sm border border-slate-100 dark:border-slate-700">
+
+<span class="material-symbols-outlined text-primary" style="font-size: 20px;">category</span>
+
+<p class="text-sm font-medium text-slate-600 dark:text-slate-300">Mathematics</p>
+
+</div>
+
+</div>
+
+<!-- Visual Divider -->
+
+<div class="h-px w-full bg-slate-200 dark:bg-slate-800"></div>
+
+<!-- SectionHeader & Content -->
+
+<div class="flex flex-col gap-3">
+
+<div class="flex items-center gap-2 mb-1">
+
+<span class="material-symbols-outlined text-primary" style="font-size: 22px;">sticky_note_2</span>
+
+<h3 class="text-lg font-bold leading-tight text-slate-900 dark:text-white">Catatan Pemahaman</h3>
+
+</div>
+
+<div class="rounded-xl bg-white dark:bg-[#1a202c] p-5 shadow-sm border border-slate-100 dark:border-slate-800">
+
+<p class="text-base leading-relaxed text-slate-600 dark:text-slate-300">
+
+                        Hari ini saya mempelajari konsep dasar limit. Inti dari limit adalah mendekati suatu nilai tanpa harus benar-benar mencapai nilai tersebut. 
+
+                        <br/><br/>
+
+                        Saya juga mulai memahami bagaimana turunan (derivative) sebenarnya adalah limit dari gradien garis singgung. Rumus dasar f'(x) = limit h-&gt;0 [f(x+h) - f(x)]/h sangat krusial. Perlu latihan lebih banyak soal grafik fungsi kontinu.
+
+                    </p>
+
+</div>
+
+</div>
+
+<!-- Additional Details / Resources -->
+
+<div class="flex flex-col gap-3">
+
+<div class="flex items-center gap-2 mb-1">
+
+<span class="material-symbols-outlined text-primary" style="font-size: 22px;">attachment</span>
+
+<h3 class="text-lg font-bold leading-tight text-slate-900 dark:text-white">Lampiran</h3>
+
+</div>
+
+<div class="grid grid-cols-2 gap-3">
+
+<!-- Image Attachment 1 -->
+
+<div class="relative aspect-video w-full overflow-hidden rounded-lg bg-slate-200 dark:bg-slate-800">
+
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
+
+<div class="absolute bottom-2 left-2 right-2">
+
+<p class="text-xs font-medium text-white drop-shadow-md truncate">Grafik Fungsi.jpg</p>
+
+</div>
+
+<!-- Placeholder pattern for image -->
+
+<div class="h-full w-full bg-[url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&amp;w=600&amp;auto=format&amp;fit=crop')] bg-cover bg-center" data-alt="Abstract mathematical graph glowing in blue"></div>
+
+</div>
+
+<!-- Link Attachment -->
+
+<div class="flex flex-col justify-center items-center gap-2 rounded-lg bg-slate-100 dark:bg-slate-800 p-4 border border-dashed border-slate-300 dark:border-slate-600 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors cursor-pointer">
+
+<span class="material-symbols-outlined" style="font-size: 28px;">add_photo_alternate</span>
+
+<span class="text-xs font-medium">Tambah Foto</span>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+<!-- Bottom Action Area -->
+
+<div class="mt-8 px-5 pb-6">
+
+<button class="w-full flex items-center justify-center gap-2 rounded-xl bg-red-50 dark:bg-red-500/10 p-4 text-red-600 dark:text-red-400 font-semibold hover:bg-red-100 dark:hover:bg-red-500/20 transition-all active:scale-[0.98]">
+
+<span class="material-symbols-outlined" style="font-size: 20px;">delete</span>
+
+                Hapus Catatan
+
+            </button>
+
+<p class="mt-4 text-center text-xs text-slate-400 dark:text-slate-500">
+
+                Terakhir diubah: 12 Oct 2023, 14:30
+
+            </p>
+
+</div>
+
+</div>
+
+</body></html>
+

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CatatanBelajar</string>
+    <string name="search_hint">Cari materi, judul, atau tag...</string>
+    <string name="filter_all">Semua</string>
+    <string name="filter_unfinished">Belum Paham</string>
+    <string name="filter_understood">Sudah Paham</string>
+    <string name="filter_review">Butuh Review</string>
+    <string name="add_note">Tambah Catatan</string>
+    <string name="edit_note">Edit Catatan</string>
+    <string name="detail_note">Detail Catatan</string>
+    <string name="settings">Pengaturan</string>
+    <string name="delete_note">Hapus Catatan</string>
+    <string name="save">Simpan Perubahan</string>
+    <string name="cancel">Batal</string>
+    <string name="title_required">Judul wajib diisi</string>
+    <string name="delete_confirmation">Apakah Anda yakin ingin menghapus catatan ini?</string>
+    <string name="reset_data_confirmation">Apakah Anda yakin ingin menghapus semua data? Tindakan ini tidak dapat dibatalkan.</string>
+</resources>
