@@ -1,0 +1,100 @@
+{
+  "ad_key": [
+    {
+      "enable": true,
+      "scene_key": "in_splash",
+      "ad_list_beans": [
+        {
+          "key": "one_splash",
+          "type": "splash",
+          "gm_id": "",
+          "enable": true,
+          "placement_id": ""
+        }
+      ]
+    },
+    {
+      "enable": true,
+      "scene_key": "in_function",
+      "ad_list_beans": [
+        {
+          "key": "one_inter",
+          "type": "inter",
+          "gm_id": "",
+          "enable": true,
+          "placement_id": "n691eb8e557bae"
+        }
+      ]
+    },
+    {
+      "enable": true,
+      "scene_key": "in_tab",
+      "ad_list_beans": [
+        {
+          "key": "one_inter",
+          "type": "inter",
+          "gm_id": "",
+          "enable": true,
+          "placement_id": "n691eb8e557bae"
+        }
+      ]
+    },
+    {
+      "enable": true,
+      "scene_key": "turn_time_one",
+      "ad_list_beans": [
+
+        {
+          "key": "three_inter",
+          "type": "inter",
+          "gm_id": "",
+          "enable": true,
+          "placement_id": "n691eb8e557bae"
+        }
+      ]
+    },
+    {
+      "enable": true,
+      "scene_key": "interval_ad",
+      "ad_list_beans": [
+
+        {
+          "key": "three_inter",
+          "type": "inter",
+          "gm_id": "",
+          "enable": true,
+          "placement_id": "n691eb8e557bae"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "ka": true,
+    "kp": true,
+    "dialog": true,
+    "timerCount": [
+      5,
+      8,
+      10,
+      20,
+      100
+    ],
+    "timerMinute": [
+      1,
+      8,
+      10,
+      20,
+      30
+    ],
+    "hour_turn_time": 10,
+    "ipu_arpu_ecpm": {
+      "ipu": 0,
+      "arpu": 0,
+      "ecpm": 0
+    },
+    "tab_switch": {
+      "enable": true,
+      "interval_time": 300
+    }
+  }
+}

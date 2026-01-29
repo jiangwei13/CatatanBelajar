@@ -6,6 +6,8 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
 
+import com.p.b.ad.AdViewMana;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashScreenActivity extends AppCompatActivity {
@@ -35,6 +37,9 @@ public class SplashScreenActivity extends AppCompatActivity {
         handler = new Handler(Looper.getMainLooper());
         handler.postDelayed(() -> {
             if (!isFinishing() && !isDestroyed()) {
+
+                AdViewMana.initView(this, "in_tab");
+
                 Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();

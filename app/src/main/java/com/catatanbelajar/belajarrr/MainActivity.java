@@ -5,14 +5,8 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+
 import com.google.android.material.button.MaterialButton;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
@@ -20,10 +14,15 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -276,6 +275,8 @@ public class MainActivity extends AppCompatActivity {
     private void setupFab() {
         if (addFab != null) {
             addFab.setOnClickListener(v -> {
+                // 插屏广告
+                AdHelper.INSTANCE.loadInterAd(this, "in_tab");
                 Intent intent = new Intent(MainActivity.this, EditActivity.class);
                 intent.putExtra("is_new", true);
                 startActivity(intent);
@@ -297,6 +298,8 @@ public class MainActivity extends AppCompatActivity {
         MaterialButton viewAllButton = findViewById(R.id.viewAllText);
         if (viewAllButton != null) {
             viewAllButton.setOnClickListener(v -> {
+                // 插屏广告
+                AdHelper.INSTANCE.loadInterAd(this, "in_tab");
                 // Buka ViewAllActivity untuk menampilkan semua catatan
                 Intent intent = new Intent(MainActivity.this, ViewAllActivity.class);
                 startActivity(intent);

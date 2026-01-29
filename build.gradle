@@ -1,5 +1,48 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-plugins {
-    alias(libs.plugins.android.application) apply false
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        classpath 'com.github.megatronking.stringfog:gradle-plugin:5.0.0'
+        classpath 'com.github.Petterpx.walle:plugin:1.0.5'
+    }
 }
 
+plugins {
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.android.library) apply false
+    id 'com.google.gms.google-services' version '4.4.2' apply false
+    id 'org.jetbrains.kotlin.android' version '2.1.0' apply false
+}
+
+// 全局配置，供子模块使用
+ext.appConfig = [
+    "HOST"              : "",
+    "privacyUrl"        : "",
+    "userUrl"           : "",
+    "DEBUG_APPID"       : "",
+    "RELEASE_APPID"     : "",
+    "DEBUG_SSK"         : "",
+    "RELEASE_SSK"       : "",
+    "isDebug"           : "true",
+    "logSwitch"         : true,
+    "buglyId"           : "",
+
+    "Admob_AppId"       : "",
+    "FISRT_SPLASH"      : "",
+    "FIRST_REWORD"      : "",
+    "VERSIONCODE"       : 3,
+    "VERSIONNAME"       : "1.0.3",
+    "umID"              : "",
+    "ad_LiveTime"       : "2025-04-30 10:00:00",
+    "ad_huawei_LiveTime": "0",
+
+    "TOPON_APPID"       : "h691eb23982b34",
+    "TOPON_APPKEY"      : "abb325d6a80de9f580f2f41dc6a825556",
+    "AF_APP_KEY"        : "",
+    "ADJUST_TOKEN"      : "",
+    "APPID"             : "",
+]

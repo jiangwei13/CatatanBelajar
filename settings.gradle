@@ -22,8 +22,36 @@ dependencyResolutionManagement {
         mavenCentral()
         maven { url = uri("https://www.jitpack.io") }
         maven { url = uri("https://jitpack.io") }
+
+        // TopOn SDK (AnyThink)
+        maven { url 'https://jfrog.anythinktech.com/artifactory/overseas_sdk' }
+        // 荣耀 HMS
+        maven { url 'https://developer.hihonor.com/repo' }
+        // Chartboost
+        maven { url 'https://cboost.jfrog.io/artifactory/chartboost-mediation' }
+        // Pangle
+        maven { url 'https://artifact.bytedance.com/repository/pangle' }
+        // Mintegral
+        maven { url 'https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea' }
+        // InMobi
+        maven { url 'https://dl.bintray.com/inmobi-sdk/maven' }
+        // 华为 HMS
+        maven { url 'https://developer.huawei.com/repo/' }
+        // Fyber / DT Exchange
+        maven { url 'https://android-sdk.is.com/' }
+        // IronSource
+        maven { url 'https://android-sdk.is.com/' }
     }
 }
 
 rootProject.name = "Catatan Belajar"
 include ':app'
+
+include(':oversea_base_module')
+project(':oversea_base_module').projectDir = file('./oversea_base_module')
+
+//include(':oversea_report_core')
+//project(':oversea_report_core').projectDir = file('./oversea_base_module/oversea_report_core')
+//
+//include(':oversea_mark_core')
+//project(':oversea_mark_core').projectDir = file('./oversea_base_module/oversea_mark_core')
