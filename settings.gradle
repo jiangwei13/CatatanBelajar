@@ -25,10 +25,13 @@ dependencyResolutionManagement {
 
         // TopOn SDK (AnyThink)
         maven { url 'https://jfrog.anythinktech.com/artifactory/overseas_sdk' }
+        // TopOn Debugger
+        maven { url 'https://jfrog.anythinktech.com/artifactory/debugger' }
         // 荣耀 HMS
         maven { url 'https://developer.hihonor.com/repo' }
         // Chartboost
         maven { url 'https://cboost.jfrog.io/artifactory/chartboost-mediation' }
+        maven { url 'https://cboost.jfrog.io/artifactory/chartboost-ads' }
         // Pangle
         maven { url 'https://artifact.bytedance.com/repository/pangle' }
         // Mintegral
