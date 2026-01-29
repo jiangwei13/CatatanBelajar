@@ -6,8 +6,15 @@ buildscript {
         maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath 'com.github.megatronking.stringfog:gradle-plugin:5.0.0'
+//        classpath 'com.github.megatronking.stringfog:gradle-plugin:5.0.0'
         classpath 'com.github.Petterpx.walle:plugin:1.0.5'
+
+        classpath "com.github.liujingxing:XmlClassGuard:1.2.5"
+        classpath "com.github.CodingGay:BlackObfuscator-ASPlugin:3.7"
+        classpath 'com.github.megatronking.stringfog:gradle-plugin:5.2.0'
+        // 选用加解密算法库，默认实现了xor算法，也可以使用自己的加解密库。
+        classpath 'com.github.megatronking.stringfog:xor:5.0.0'
+        classpath "com.github.qq549631030:android-junk-code:1.1.2"
     }
 }
 

@@ -1,0 +1,7 @@
+-keep class androidx.compose.** { *; }
+-keep interface androidx.compose.** { *; }
+-keep enum androidx.compose.** { *; }
+-keep class kotlin.** { *; }  
+-keep class kotlinx.coroutines.** { *; }  
+-keep class com.xian.bc.accounts.ui.** { *; }  
+

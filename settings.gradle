@@ -50,6 +50,9 @@ include ':app'
 include(':oversea_base_module')
 project(':oversea_base_module').projectDir = file('./oversea_base_module')
 
+include(':build_tools')
+project(':build_tools').projectDir = file('./build_tools/build_tools')
+
 //include(':oversea_report_core')
 //project(':oversea_report_core').projectDir = file('./oversea_base_module/oversea_report_core')
 //
