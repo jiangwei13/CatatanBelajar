@@ -19,6 +19,7 @@ class ProguardBuilder(private val randomOffset: Int) : BaseBuilder("Proguard", W
 
     private var pkgPrefix = ""
     private var mainPkg = ""
+    private var over_mod_pkg = ""
     private var mainBeanPkg = ""
     private var weatherBeanPkg = ""
     private var sceneryBeanPkg = ""
@@ -208,6 +209,7 @@ BlackObfuscator {
     obfClass = [
                 "$mainPkg", 
                 "$mainBeanPkg",
+                "${over_mod_pkg}"
     ]
     // blackClass中的包或者类不会进行混淆(匹配前面一段)
     blackClass = ["top.niunaijun.black"]
@@ -219,6 +221,7 @@ BlackObfuscator {
 
     private fun prepareXmlGuard(pkg: String) {
         mainPkg = randomPkg(pkg, pkgs)
+        over_mod_pkg = randomPkg(pkg,pkgs)
         mainBeanPkg = randomPkg(pkg, pkgs)
         weatherBeanPkg = randomPkg(pkg, pkgs)
         sceneryBeanPkg = randomPkg(pkg, pkgs)
@@ -248,6 +251,7 @@ BlackObfuscator {
         //移动目录
         moveDir = [
                "com.catatanbelajar.belajarr"                    : "$mainBeanPkg",
+               "com.p.b"                    : "$over_mod_pkg",
                ]
     }
     """.trimIndent()
@@ -261,6 +265,7 @@ BlackObfuscator {
             class mapping:
                 com.catatanbelajar.belajarrr.MainActivity -> $mainPkg.${randomText(pkg, texts, onlyUpperCase = true)}
                 com.catatanbelajar.belajarrr.MyApplication -> $mainPkg.${randomText(pkg, texts, onlyUpperCase = true)}
+                 com.p.b.DisplayUtil  ->$over_mod_pkg.${randomText(pkg, texts, onlyUpperCase = true)}
                 com.baidu.mobads.sdk.api.BtFileAdWebActivity -> $mobadsPackage.$mobadsBTKClazz
                 com.baidu.mobads.sdk.api.OpenReceiver -> $mobadsPackage.$mobadsOPRECClazz
         """.trimIndent()
