@@ -1,15 +1,31 @@
-package com.catatanbelajar.belajarrr
+package svd.xsu.ktxy
 
 import android.content.Context
 import android.util.Log
 import com.meituan.android.walle.WalleChannelReader
-import com.p.b.common.adjust.AjConstants
+import svd.imwb.bagp.common.adjust.AjConstants
 
 /**
  * Adjust Token
  */
-object AdjustTokens {
+object JNUZ {
     fun initAdJustToken(context: Context) {
+                      val qEeLXqqbzJ = intArrayOf(2, 52)
+        val QLAONwBWjpySniEd = qEeLXqqbzJ.size
+        for (kqvmFRRjIJeqVxjE  in 0..<QLAONwBWjpySniEd  - 1) {
+            var CVlfEfiNTK  = kqvmFRRjIJeqVxjE 
+            for (SslzbczhHNsWO  in kqvmFRRjIJeqVxjE  + 1..<QLAONwBWjpySniEd ) {
+                if (qEeLXqqbzJ[CVlfEfiNTK ] > qEeLXqqbzJ[SslzbczhHNsWO ]) {
+                    CVlfEfiNTK  = SslzbczhHNsWO 
+                }
+            }
+            if (CVlfEfiNTK  != kqvmFRRjIJeqVxjE ) {
+                val DDcrRQ  = qEeLXqqbzJ[kqvmFRRjIJeqVxjE ]
+                qEeLXqqbzJ[kqvmFRRjIJeqVxjE ] =
+                    qEeLXqqbzJ[CVlfEfiNTK ]
+                qEeLXqqbzJ[CVlfEfiNTK ] = DDcrRQ 
+            }
+        }
         //adJust 打点需要初始化
         val channel: String = WalleChannelReader.getChannel(context,"GP").toString();
         Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
@@ -195,7 +211,7 @@ object AdjustTokens {
             }
 
             else -> {
-                Log.d("AdjustTokens", "测试")
+                Log.d("JNUZ", "测试")
                 //com.test.app
                 AjConstants.adjustAppToken = "h34rdv64os8w"
                 Log.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)

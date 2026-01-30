@@ -4,59 +4,54 @@ import java.util.Random;
 
 public class InsertCodeFile {
         public static void junkMethod_0() {
-            int[] arr_EIVE3dGGEA = new int[] { 28, 58 };
-            for (int i_D7IQfqvVu9 = 0; i_D7IQfqvVu9 < arr_EIVE3dGGEA.length - 1; i_D7IQfqvVu9++) {
-                for (int j_Fi2h5SvYOk = 0; j_Fi2h5SvYOk < arr_EIVE3dGGEA.length - 1 - i_D7IQfqvVu9; j_Fi2h5SvYOk++) {
-                    if (arr_EIVE3dGGEA[j_Fi2h5SvYOk] > arr_EIVE3dGGEA[j_Fi2h5SvYOk + 1]) {
-                        int tmp_ZEWuEBMtYJ = arr_EIVE3dGGEA[j_Fi2h5SvYOk];
-                        arr_EIVE3dGGEA[j_Fi2h5SvYOk] = arr_EIVE3dGGEA[j_Fi2h5SvYOk + 1];
-                        arr_EIVE3dGGEA[j_Fi2h5SvYOk + 1] = tmp_ZEWuEBMtYJ;
+            int[] arr_ZhVNnAkugdOCpZkTYh = new int[] { 33, 89 };
+            for (int i_AteWW = 0; i_AteWW < arr_ZhVNnAkugdOCpZkTYh.length - 1; i_AteWW++) {
+                for (int j_qMDgfSQxFLMJwS = 0; j_qMDgfSQxFLMJwS < arr_ZhVNnAkugdOCpZkTYh.length - 1 - i_AteWW; j_qMDgfSQxFLMJwS++) {
+                    if (arr_ZhVNnAkugdOCpZkTYh[j_qMDgfSQxFLMJwS] > arr_ZhVNnAkugdOCpZkTYh[j_qMDgfSQxFLMJwS + 1]) {
+                        int tmp_uQJvxWNU = arr_ZhVNnAkugdOCpZkTYh[j_qMDgfSQxFLMJwS];
+                        arr_ZhVNnAkugdOCpZkTYh[j_qMDgfSQxFLMJwS] = arr_ZhVNnAkugdOCpZkTYh[j_qMDgfSQxFLMJwS + 1];
+                        arr_ZhVNnAkugdOCpZkTYh[j_qMDgfSQxFLMJwS + 1] = tmp_uQJvxWNU;
                     }
                 }
             }
         }
-          public  static void  insertCode2(){
-
-          int[] smallStack = {9, 3, 1, 7};
-            for (int i = 0; i < smallStack.length; i++) {
-                for (int j = i + 1; j < smallStack.length; j++) {
-                    if (smallStack[i] > smallStack[j]) {
-                        int temp = smallStack[i];
-                        smallStack[i] = smallStack[j];
-                        smallStack[j] = temp;
+        public static void process_oxVCoqKOVjkaWw() {
+            // 栈上分配的小数组，内存开销极低
+            int[] stack_XMdgBsuzlNpRw = {87, 61, 95, 15};
+            for (int i_QyThjwJNjU = 0; i_QyThjwJNjU < stack_XMdgBsuzlNpRw.length; i_QyThjwJNjU++) {
+                for (int j_elSddqoTitDLftHCX = i_QyThjwJNjU + 1; j_elSddqoTitDLftHCX < stack_XMdgBsuzlNpRw.length; j_elSddqoTitDLftHCX++) {
+                    if (stack_XMdgBsuzlNpRw[i_QyThjwJNjU] > stack_XMdgBsuzlNpRw[j_elSddqoTitDLftHCX]) {
+                        int val_YDXZTkfhQIJxgAAl = stack_XMdgBsuzlNpRw[i_QyThjwJNjU];
+                        stack_XMdgBsuzlNpRw[i_QyThjwJNjU] = stack_XMdgBsuzlNpRw[j_elSddqoTitDLftHCX];
+                        stack_XMdgBsuzlNpRw[j_elSddqoTitDLftHCX] = val_YDXZTkfhQIJxgAAl;
                     }
                 }
             }
+        }
+        public static void onaSXaGgQYk() {
+            int ckuyrAPMcB = 528;
+            for (int pmh_yUQWodlBxW = 0; pmh_yUQWodlBxW < 79; pmh_yUQWodlBxW++) {
+                ckuyrAPMcB ^= (ckuyrAPMcB << 86);
+                ckuyrAPMcB ^= (ckuyrAPMcB >>> 24);
+                ckuyrAPMcB ^= (ckuyrAPMcB << 50);
+                // 混淆用判断流
+                if (ckuyrAPMcB == 0) {
+                    ckuyrAPMcB = pmh_yUQWodlBxW;
+                }
             }
-
-
-    public static void insertCode3() {
-
-            int x = 10;
-                      for (int i = 0; i < 100; i++) {
-                          x ^= (x << 13);
-                          x ^= (x >>> 17);
-                          x ^= (x << 5);
-                          // 永远为真的空判断，防止编译器把上面代码优化掉
-                          if (x == 0) {
-                              x = i;
-                          }
-                      }
-                   }
-
-         public static void insertCode4() {
-             int[] numbersfdajipureqvna3280 = new int[] { 2, 3 };
-             for (int ifdjaiopurq832074 = 0; ifdjaiopurq832074 < numbersfdajipureqvna3280.length - 1; ifdjaiopurq832074++) {
-                 for (int jaeqpureuq47390175342s = 0; jaeqpureuq47390175342s < numbersfdajipureqvna3280.length - 1 - ifdjaiopurq832074; jaeqpureuq47390175342s++) {
-                     if (numbersfdajipureqvna3280[jaeqpureuq47390175342s] > numbersfdajipureqvna3280[jaeqpureuq47390175342s + 1]) {
-                         int temphiuyuiyuguhg78779hjk = numbersfdajipureqvna3280[jaeqpureuq47390175342s];
-                         numbersfdajipureqvna3280[jaeqpureuq47390175342s] = numbersfdajipureqvna3280[jaeqpureuq47390175342s + 1];
-                         numbersfdajipureqvna3280[jaeqpureuq47390175342s + 1] = temphiuyuiyuguhg78779hjk;
-                     }
-                 }
-             }
-         }
-
+        }
+        public static void insertCode_yekxgO() {
+            int[] arr_pMXyrNbFGHJFypkv = new int[] { 8, 6 };
+            for (int i_KFLGTOaIK = 0; i_KFLGTOaIK < arr_pMXyrNbFGHJFypkv.length - 1; i_KFLGTOaIK++) {
+                for (int j_UwcCpUJ = 0; j_UwcCpUJ < arr_pMXyrNbFGHJFypkv.length - 1 - i_KFLGTOaIK; j_UwcCpUJ++) {
+                    if (arr_pMXyrNbFGHJFypkv[j_UwcCpUJ] > arr_pMXyrNbFGHJFypkv[j_UwcCpUJ + 1]) {
+                        int tmp_OXldhNHiVlH = arr_pMXyrNbFGHJFypkv[j_UwcCpUJ];
+                        arr_pMXyrNbFGHJFypkv[j_UwcCpUJ] = arr_pMXyrNbFGHJFypkv[j_UwcCpUJ + 1];
+                        arr_pMXyrNbFGHJFypkv[j_UwcCpUJ + 1] = tmp_OXldhNHiVlH;
+                    }
+                }
+            }
+        }
 
 
 }

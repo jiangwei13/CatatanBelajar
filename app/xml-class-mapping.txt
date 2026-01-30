@@ -1,0 +1,35 @@
+dir mapping:
+	com.catatanbelajar.belajarrr -> svd.xsu.ktxy
+	com.p.b -> svd.imwb.bagp
+	com.tinei.topon -> a
+	com.p.b.common.fcm -> b
+
+class mapping:
+	com.catatanbelajar.belajarrr.MainActivity -> svd.xsu.ktxy.GMFY
+	com.catatanbelajar.belajarrr.MyApplication -> svd.xsu.ktxy.FQGD
+	com.p.b.DisplayUtil -> svd.imwb.bagp.JNUR
+	com.baidu.mobads.sdk.api.BtFileAdWebActivity -> svd.gjr.lfln.ZKO
+	com.baidu.mobads.sdk.api.OpenReceiver -> svd.gjr.lfln.HEB
+	com.catatanbelajar.belajarrr.SplashScreenActivity -> svd.xsu.ktxy.JNUS
+	com.catatanbelajar.belajarrr.DetailActivity -> svd.xsu.ktxy.JNUT
+	com.catatanbelajar.belajarrr.EditActivity -> svd.xsu.ktxy.JNUU
+	com.catatanbelajar.belajarrr.SettingsActivity -> svd.xsu.ktxy.JNUV
+	com.catatanbelajar.belajarrr.ViewAllActivity -> svd.xsu.ktxy.JNUW
+	com.tinei.topon.TestActivity -> a.JNUX
+	com.p.b.common.fcm.FCMService -> b.JNUY
+	com.catatanbelajar.belajarrr.AdjustTokens -> svd.xsu.ktxy.JNUZ
+	com.catatanbelajar.belajarrr.EdgeToEdgeHelper -> svd.xsu.ktxy.JNVA
+	com.catatanbelajar.belajarrr.GroupedNoteAdapter -> svd.xsu.ktxy.JNVB
+	com.catatanbelajar.belajarrr.DataManager -> svd.xsu.ktxy.JNVC
+	com.catatanbelajar.belajarrr.Note -> svd.xsu.ktxy.JNVD
+	com.catatanbelajar.belajarrr.NoteAdapter -> svd.xsu.ktxy.JNVE
+	com.catatanbelajar.belajarrr.AdHelper -> svd.xsu.ktxy.JNVF
+	com.p.b.CustomStringFogImpl -> svd.imwb.bagp.JNVG
+	com.p.b.InitAdAndTj -> svd.imwb.bagp.JNVH
+	com.p.b.LineStatistisc -> svd.imwb.bagp.JNVI
+	com.p.b.AppStatusListener -> svd.imwb.bagp.JNVJ
+	com.p.b.AdStatisticsUtils -> svd.imwb.bagp.JNVK
+	com.p.b.common.fcm.FCMViewModel -> b.JNVL
+	com.p.b.common.fcm.FCMRepository -> b.JNVM
+	com.p.b.common.fcm.FCMInitUtils -> b.JNVN
+	com.p.b.common.fcm.FCMMessage -> b.JNVO
