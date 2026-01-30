@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "658885438797",
+    "project_id": "catatan-belajar",
+    "storage_bucket": "catatan-belajar.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658885438797:android:6144380955d42552b09b04",
+        "android_client_info": {
+          "package_name": "com.catatanbelajar.belajarrr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB921fOoNJ8hvElxtArJMOX3fesHckquGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

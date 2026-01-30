@@ -94,7 +94,7 @@ android {
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.catatanbelajar.belajarrr2"
+        applicationId "com.catatanbelajar.belajarrr"
         minSdk 25
         targetSdk 35
         versionCode rootProject.ext.appConfig.VERSIONCODE

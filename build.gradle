@@ -47,9 +47,9 @@ ext.appConfig = [
     "ad_LiveTime"       : "2025-04-30 10:00:00",
     "ad_huawei_LiveTime": "0",
 
-    "TOPON_APPID"       : "h691eb23982b34",
-    "TOPON_APPKEY"      : "abb325d6a80de9f580f2f41dc6a825556",
+    "TOPON_APPID"       : "h6979b3fba42e2",
+    "TOPON_APPKEY"      : "a66ada1bdbfd1e132aaa492ae28e58e3e",
     "AF_APP_KEY"        : "",
-    "ADJUST_TOKEN"      : "",
+    "ADJUST_TOKEN"      : "d1d6pexw258g",
     "APPID"             : "",
 ]
