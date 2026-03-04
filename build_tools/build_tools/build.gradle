@@ -53,6 +53,6 @@ sourceSets.main.resources {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    testImplementation 'junit:junit:4.+'
+//    testImplementation 'junit:junit:4.13.2'
     implementation("com.github.javaparser:javaparser-core:3.23.0")
 }

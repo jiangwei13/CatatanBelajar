@@ -1,6 +1,19 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
+        maven {
+            url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/'
+        }
+
+        // 添加 JUnit 的 SNAPSHOT 仓库
+        maven {
+            url 'https://oss.sonatype.org/content/repositories/snapshots/'
+        }
+
+        // 或者使用 Maven Central 的 SNAPSHOT 仓库
+        maven {
+            url 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
+        }
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/public' }
@@ -9,6 +22,7 @@ buildscript {
         google()
         mavenCentral()
         maven { url 'https://jitpack.io' }
+
     }
     dependencies {
 //        classpath 'com.github.megatronking.stringfog:gradle-plugin:5.0.0'
