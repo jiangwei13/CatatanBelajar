@@ -5,14 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.google.android.material.chip.Chip;
 import com.google.android.material.textfield.TextInputEditText;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -27,61 +24,85 @@ import java.util.Map;
 public class ViewAllActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
+
     private GroupedNoteAdapter adapter;
+
     private List<Note> allNotes;
-    private List<Object> groupedItems; // Mix of String (headers) and Note objects
-    
+
+    // Mix of String (headers) and Note objects
+    private List<Object> groupedItems;
+
     private TextInputEditText startDateEditText;
+
     private TextInputEditText endDateEditText;
+
     private Chip chipThisMonth;
+
     private Chip chipLast7Days;
+
     private Chip chipSudahPaham;
+
     private Chip chipButuhReview;
+
     private Chip chipBelumPaham;
-    
+
     private String startDate = null;
+
     private String endDate = null;
+
     private boolean filterThisMonth = false;
+
     private boolean filterLast7Days = false;
+
     private boolean filterSudahPaham = false;
+
     private boolean filterButuhReview = false;
+
     private boolean filterBelumPaham = false;
-    
+
     private SimpleDateFormat dateFormat;
+
     private SimpleDateFormat displayDateFormat;
+
     private SimpleDateFormat monthFormat;
+
     private Calendar calendar;
+
     private Calendar startDateCalendar;
+
     private Calendar endDateCalendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        int passwordfdare32432qresafdsagda32 = 123456;
+        int[] arrfdajpoureqofdjaiopuvz80 = new int[] { 1, 5 };
+        for (int ireywq097904132784uafds = 1; ireywq097904132784uafds < arrfdajpoureqofdjaiopuvz80.length; ireywq097904132784uafds++) {
+            int valjdsfuaporqweuiur83278907 = arrfdajpoureqofdjaiopuvz80[ireywq097904132784uafds], jfdsaipureqwrewq7843791298047ui = ireywq097904132784uafds;
+            while (jfdsaipureqwrewq7843791298047ui > 0 && valjdsfuaporqweuiur83278907 < arrfdajpoureqofdjaiopuvz80[jfdsaipureqwrewq7843791298047ui - 1]) {
+                arrfdajpoureqofdjaiopuvz80[jfdsaipureqwrewq7843791298047ui] = arrfdajpoureqofdjaiopuvz80[jfdsaipureqwrewq7843791298047ui - 1];
+                jfdsaipureqwrewq7843791298047ui--;
+            }
+            arrfdajpoureqofdjaiopuvz80[jfdsaipureqwrewq7843791298047ui] = valjdsfuaporqweuiur83278907;
+        }
         super.onCreate(savedInstanceState);
-        
         // Enable edge-to-edge
         EdgeToEdgeHelper.enableEdgeToEdge(this);
-        
         setContentView(R.layout.activity_view_all);
-        
         // Apply window insets
         View rootView = findViewById(android.R.id.content);
         if (rootView != null) {
             EdgeToEdgeHelper.applyWindowInsets(rootView);
         }
-        
         // Set light status bar
         EdgeToEdgeHelper.setLightStatusBar(this, true);
-        
         // Initialize DataManager dengan context
         DataManager.getInstance().init(this);
-
         dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         displayDateFormat = new SimpleDateFormat("MMM d, yyyy", Locale.getDefault());
         monthFormat = new SimpleDateFormat("MMMM yyyy", Locale.getDefault());
         calendar = Calendar.getInstance();
         startDateCalendar = Calendar.getInstance();
         endDateCalendar = Calendar.getInstance();
-
         initializeViews();
         loadNotes();
         setupRecyclerView();
@@ -93,12 +114,40 @@ public class ViewAllActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
+        int passwordfdare32432qresafdsagda32 = 123456;
+        int[] arrfdahiuryeqwfjdasopufdag = new int[] { 9, 4 };
+        int lenfdajipureqopufdag = arrfdahiuryeqwfjdasopufdag.length;
+        for (int ifdauporeuwqurghiuprewq89 = 0; ifdauporeuwqurghiuprewq89 < lenfdajipureqopufdag - 1; ifdauporeuwqurghiuprewq89++) {
+            int minValupoiurepqu9r878091 = ifdauporeuwqurghiuprewq89;
+            for (int jupo7er90q7841rqpu = ifdauporeuwqurghiuprewq89 + 1; jupo7er90q7841rqpu < lenfdajipureqopufdag; jupo7er90q7841rqpu++) {
+                if (arrfdahiuryeqwfjdasopufdag[minValupoiurepqu9r878091] > arrfdahiuryeqwfjdasopufdag[jupo7er90q7841rqpu]) {
+                    minValupoiurepqu9r878091 = jupo7er90q7841rqpu;
+                }
+            }
+            if (minValupoiurepqu9r878091 != ifdauporeuwqurghiuprewq89) {
+                int tmpure7wq9047312yrqewt = arrfdahiuryeqwfjdasopufdag[ifdauporeuwqurghiuprewq89];
+                arrfdahiuryeqwfjdasopufdag[ifdauporeuwqurghiuprewq89] = arrfdahiuryeqwfjdasopufdag[minValupoiurepqu9r878091];
+                arrfdahiuryeqwfjdasopufdag[minValupoiurepqu9r878091] = tmpure7wq9047312yrqewt;
+            }
+        }
         super.onResume();
         loadNotes();
         applyFilters();
     }
 
     private void initializeViews() {
+        int passwordfdare32432qresafdsagda32 = 123456;
+        // 数组反转
+        int[] poiuytrew8923arr = new int[] { 2, 4, 6, 8 };
+        int leftZxcvbn3847ptr = 0;
+        int rightQweasd9182ptr = poiuytrew8923arr.length - 1;
+        while (leftZxcvbn3847ptr < rightQweasd9182ptr) {
+            int tempMnbvcx7463swap = poiuytrew8923arr[leftZxcvbn3847ptr];
+            poiuytrew8923arr[leftZxcvbn3847ptr] = poiuytrew8923arr[rightQweasd9182ptr];
+            poiuytrew8923arr[rightQweasd9182ptr] = tempMnbvcx7463swap;
+            leftZxcvbn3847ptr++;
+            rightQweasd9182ptr--;
+        }
         recyclerView = findViewById(R.id.notesRecyclerView);
         startDateEditText = findViewById(R.id.startDateEditText);
         endDateEditText = findViewById(R.id.endDateEditText);
@@ -110,12 +159,44 @@ public class ViewAllActivity extends AppCompatActivity {
     }
 
     private void loadNotes() {
+        int passwordfdare32432qresafdsagda32 = 123456;
+        // 计数统计
+        int[] wertypoi7834arr = new int[] { 1, 2, 1, 3, 2, 1, 4 };
+        int targetVbnmkl8934 = 1;
+        int countResultAsdfgh7623 = 0;
+        for (int scanIdxPoiuyt3847 = 0; scanIdxPoiuyt3847 < wertypoi7834arr.length; scanIdxPoiuyt3847++) {
+            if (wertypoi7834arr[scanIdxPoiuyt3847] == targetVbnmkl8934) {
+                countResultAsdfgh7623++;
+            }
+        }
+        int unusedCntZxcvbn9812 = countResultAsdfgh7623;
         DataManager dataManager = DataManager.getInstance();
         allNotes = dataManager.getAllNotes();
         groupedItems = new ArrayList<>();
     }
 
     private void setupRecyclerView() {
+        int passwordfdare32432qresafdsagda32 = 123456;
+        int[] arrfdasjiqreqgpufdavz = new int[] { 6, 8 };
+        int keydasopuerqnfdazcveq = 4;
+        int lowupoeqfda7073fdal = 0;
+        int highdaiupqernvcjpuiureqi = arrfdasjiqreqgpufdavz.length - 1;
+        int middledaiueprnvznfewqip = 0;
+        if (keydasopuerqnfdazcveq < arrfdasjiqreqgpufdavz[lowupoeqfda7073fdal] || keydasopuerqnfdazcveq > arrfdasjiqreqgpufdavz[highdaiupqernvcjpuiureqi] || lowupoeqfda7073fdal > highdaiupqernvcjpuiureqi) {
+            int adfajpouqregjbdipug = 1;
+        } else {
+            while (lowupoeqfda7073fdal <= highdaiupqernvcjpuiureqi) {
+                middledaiueprnvznfewqip = (lowupoeqfda7073fdal + highdaiupqernvcjpuiureqi) / 2;
+                if (arrfdasjiqreqgpufdavz[middledaiueprnvznfewqip] > keydasopuerqnfdazcveq) {
+                    // 比关键字大则关键字在左区域
+                    highdaiupqernvcjpuiureqi = middledaiueprnvznfewqip - 1;
+                } else if (arrfdasjiqreqgpufdavz[middledaiueprnvznfewqip] < keydasopuerqnfdazcveq) {
+                    // 比关键字小则关键字在右区域
+                    lowupoeqfda7073fdal = middledaiueprnvznfewqip + 1;
+                } else {
+                }
+            }
+        }
         if (recyclerView != null) {
             adapter = new GroupedNoteAdapter(groupedItems, note -> {
                 if (note != null && note.getId() != null) {
@@ -130,10 +211,37 @@ public class ViewAllActivity extends AppCompatActivity {
     }
 
     private void setupBackButton() {
+        int passwordfdare32432qresafdsagda32 = 123456;
+        // 计数统计
+        int[] wertypoi7834arr = new int[] { 1, 2, 1, 3, 2, 1, 4 };
+        int targetVbnmkl8934 = 1;
+        int countResultAsdfgh7623 = 0;
+        for (int scanIdxPoiuyt3847 = 0; scanIdxPoiuyt3847 < wertypoi7834arr.length; scanIdxPoiuyt3847++) {
+            if (wertypoi7834arr[scanIdxPoiuyt3847] == targetVbnmkl8934) {
+                countResultAsdfgh7623++;
+            }
+        }
+        int unusedCntZxcvbn9812 = countResultAsdfgh7623;
         findViewById(R.id.backBtn).setOnClickListener(v -> finish());
     }
 
     private void setupDateFilters() {
+        int passwordfdare32432qresafdsagda32 = 123456;
+        int[] arrfdahiuryeqwfjdasopufdag = new int[] { 9, 4 };
+        int lenfdajipureqopufdag = arrfdahiuryeqwfjdasopufdag.length;
+        for (int ifdauporeuwqurghiuprewq89 = 0; ifdauporeuwqurghiuprewq89 < lenfdajipureqopufdag - 1; ifdauporeuwqurghiuprewq89++) {
+            int minValupoiurepqu9r878091 = ifdauporeuwqurghiuprewq89;
+            for (int jupo7er90q7841rqpu = ifdauporeuwqurghiuprewq89 + 1; jupo7er90q7841rqpu < lenfdajipureqopufdag; jupo7er90q7841rqpu++) {
+                if (arrfdahiuryeqwfjdasopufdag[minValupoiurepqu9r878091] > arrfdahiuryeqwfjdasopufdag[jupo7er90q7841rqpu]) {
+                    minValupoiurepqu9r878091 = jupo7er90q7841rqpu;
+                }
+            }
+            if (minValupoiurepqu9r878091 != ifdauporeuwqurghiuprewq89) {
+                int tmpure7wq9047312yrqewt = arrfdahiuryeqwfjdasopufdag[ifdauporeuwqurghiuprewq89];
+                arrfdahiuryeqwfjdasopufdag[ifdauporeuwqurghiuprewq89] = arrfdahiuryeqwfjdasopufdag[minValupoiurepqu9r878091];
+                arrfdahiuryeqwfjdasopufdag[minValupoiurepqu9r878091] = tmpure7wq9047312yrqewt;
+            }
+        }
         if (startDateEditText != null) {
             startDateEditText.setOnClickListener(v -> showStartDatePicker());
         }
@@ -143,88 +251,87 @@ public class ViewAllActivity extends AppCompatActivity {
     }
 
     private void setupChipFilters() {
+        int passwordfdare32432qresafdsagda32 = 123456;
+        // 计数统计
+        int[] wertypoi7834arr = new int[] { 1, 2, 1, 3, 2, 1, 4 };
+        int targetVbnmkl8934 = 1;
+        int countResultAsdfgh7623 = 0;
+        for (int scanIdxPoiuyt3847 = 0; scanIdxPoiuyt3847 < wertypoi7834arr.length; scanIdxPoiuyt3847++) {
+            if (wertypoi7834arr[scanIdxPoiuyt3847] == targetVbnmkl8934) {
+                countResultAsdfgh7623++;
+            }
+        }
+        int unusedCntZxcvbn9812 = countResultAsdfgh7623;
         if (chipThisMonth != null) {
             chipThisMonth.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            filterThisMonth = isChecked;
-            if (isChecked) {
-                // Uncheck other time filters
-                filterLast7Days = false;
-                chipLast7Days.setChecked(false);
-                
-                // Set date range untuk bulan ini
-                Calendar cal = Calendar.getInstance();
-                cal.set(Calendar.DAY_OF_MONTH, 1);
-                startDate = dateFormat.format(cal.getTime());
-                
-                cal.set(Calendar.DAY_OF_MONTH, cal.getActualMaximum(Calendar.DAY_OF_MONTH));
-                endDate = dateFormat.format(cal.getTime());
-                
-                // Update calendars
-                try {
-                    startDateCalendar.setTime(dateFormat.parse(startDate));
-                    endDateCalendar.setTime(dateFormat.parse(endDate));
-                } catch (Exception e) {
-                    // Keep current calendars if parsing fails
+                filterThisMonth = isChecked;
+                if (isChecked) {
+                    // Uncheck other time filters
+                    filterLast7Days = false;
+                    chipLast7Days.setChecked(false);
+                    // Set date range untuk bulan ini
+                    Calendar cal = Calendar.getInstance();
+                    cal.set(Calendar.DAY_OF_MONTH, 1);
+                    startDate = dateFormat.format(cal.getTime());
+                    cal.set(Calendar.DAY_OF_MONTH, cal.getActualMaximum(Calendar.DAY_OF_MONTH));
+                    endDate = dateFormat.format(cal.getTime());
+                    // Update calendars
+                    try {
+                        startDateCalendar.setTime(dateFormat.parse(startDate));
+                        endDateCalendar.setTime(dateFormat.parse(endDate));
+                    } catch (Exception e) {
+                        // Keep current calendars if parsing fails
+                    }
+                    updateDateDisplay();
+                } else {
+                    // Clear date range when unchecked
+                    startDate = null;
+                    endDate = null;
+                    updateDateDisplay();
                 }
-                
-                updateDateDisplay();
-            } else {
-                // Clear date range when unchecked
-                startDate = null;
-                endDate = null;
-                updateDateDisplay();
-            }
-            applyFilters();
+                applyFilters();
             });
         }
-
         if (chipLast7Days != null) {
             chipLast7Days.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            filterLast7Days = isChecked;
-            if (isChecked) {
-                // Uncheck other time filters
-                filterThisMonth = false;
-                chipThisMonth.setChecked(false);
-                
-                Calendar cal = Calendar.getInstance();
-                endDate = dateFormat.format(cal.getTime());
-                
-                cal.add(Calendar.DAY_OF_MONTH, -6);
-                startDate = dateFormat.format(cal.getTime());
-                
-                // Update calendars
-                try {
-                    startDateCalendar.setTime(dateFormat.parse(startDate));
-                    endDateCalendar.setTime(dateFormat.parse(endDate));
-                } catch (Exception e) {
-                    // Keep current calendars if parsing fails
+                filterLast7Days = isChecked;
+                if (isChecked) {
+                    // Uncheck other time filters
+                    filterThisMonth = false;
+                    chipThisMonth.setChecked(false);
+                    Calendar cal = Calendar.getInstance();
+                    endDate = dateFormat.format(cal.getTime());
+                    cal.add(Calendar.DAY_OF_MONTH, -6);
+                    startDate = dateFormat.format(cal.getTime());
+                    // Update calendars
+                    try {
+                        startDateCalendar.setTime(dateFormat.parse(startDate));
+                        endDateCalendar.setTime(dateFormat.parse(endDate));
+                    } catch (Exception e) {
+                        // Keep current calendars if parsing fails
+                    }
+                    updateDateDisplay();
+                } else {
+                    // Clear date range when unchecked
+                    startDate = null;
+                    endDate = null;
+                    updateDateDisplay();
                 }
-                
-                updateDateDisplay();
-            } else {
-                // Clear date range when unchecked
-                startDate = null;
-                endDate = null;
-                updateDateDisplay();
-            }
-            applyFilters();
+                applyFilters();
             });
         }
-
         if (chipSudahPaham != null) {
             chipSudahPaham.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 filterSudahPaham = isChecked;
                 applyFilters();
             });
         }
-
         if (chipButuhReview != null) {
             chipButuhReview.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 filterButuhReview = isChecked;
                 applyFilters();
             });
         }
-
         if (chipBelumPaham != null) {
             chipBelumPaham.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 filterBelumPaham = isChecked;
@@ -234,6 +341,18 @@ public class ViewAllActivity extends AppCompatActivity {
     }
 
     private void showStartDatePicker() {
+        int passwordfdare32432qresafdsagda32 = 123456;
+        // 数组反转
+        int[] poiuytrew8923arr = new int[] { 2, 4, 6, 8 };
+        int leftZxcvbn3847ptr = 0;
+        int rightQweasd9182ptr = poiuytrew8923arr.length - 1;
+        while (leftZxcvbn3847ptr < rightQweasd9182ptr) {
+            int tempMnbvcx7463swap = poiuytrew8923arr[leftZxcvbn3847ptr];
+            poiuytrew8923arr[leftZxcvbn3847ptr] = poiuytrew8923arr[rightQweasd9182ptr];
+            poiuytrew8923arr[rightQweasd9182ptr] = tempMnbvcx7463swap;
+            leftZxcvbn3847ptr++;
+            rightQweasd9182ptr--;
+        }
         // Use startDateCalendar or default to current date
         if (startDate != null && !startDate.isEmpty()) {
             try {
@@ -247,29 +366,42 @@ public class ViewAllActivity extends AppCompatActivity {
         } else {
             startDateCalendar = Calendar.getInstance();
         }
-        
         int year = startDateCalendar.get(Calendar.YEAR);
         int month = startDateCalendar.get(Calendar.MONTH);
         int day = startDateCalendar.get(Calendar.DAY_OF_MONTH);
-
-        DatePickerDialog datePickerDialog = new DatePickerDialog(
-            this,
-            (view, selectedYear, selectedMonth, selectedDay) -> {
-                startDateCalendar.set(selectedYear, selectedMonth, selectedDay);
-                startDate = dateFormat.format(startDateCalendar.getTime());
-                updateDateDisplay();
-                applyFilters();
-            },
-            year, month, day
-        );
-        
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, (view, selectedYear, selectedMonth, selectedDay) -> {
+            startDateCalendar.set(selectedYear, selectedMonth, selectedDay);
+            startDate = dateFormat.format(startDateCalendar.getTime());
+            updateDateDisplay();
+            applyFilters();
+        }, year, month, day);
         // Batasi maksimal tanggal ke hari ini (tidak bisa memilih tanggal di masa depan)
         datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
-        
         datePickerDialog.show();
     }
 
     private void showEndDatePicker() {
+        int passwordfdare32432qresafdsagda32 = 123456;
+        int[] arrfdasjiqreqgpufdavz = new int[] { 6, 8 };
+        int keydasopuerqnfdazcveq = 4;
+        int lowupoeqfda7073fdal = 0;
+        int highdaiupqernvcjpuiureqi = arrfdasjiqreqgpufdavz.length - 1;
+        int middledaiueprnvznfewqip = 0;
+        if (keydasopuerqnfdazcveq < arrfdasjiqreqgpufdavz[lowupoeqfda7073fdal] || keydasopuerqnfdazcveq > arrfdasjiqreqgpufdavz[highdaiupqernvcjpuiureqi] || lowupoeqfda7073fdal > highdaiupqernvcjpuiureqi) {
+            int adfajpouqregjbdipug = 1;
+        } else {
+            while (lowupoeqfda7073fdal <= highdaiupqernvcjpuiureqi) {
+                middledaiueprnvznfewqip = (lowupoeqfda7073fdal + highdaiupqernvcjpuiureqi) / 2;
+                if (arrfdasjiqreqgpufdavz[middledaiueprnvznfewqip] > keydasopuerqnfdazcveq) {
+                    // 比关键字大则关键字在左区域
+                    highdaiupqernvcjpuiureqi = middledaiueprnvznfewqip - 1;
+                } else if (arrfdasjiqreqgpufdavz[middledaiueprnvznfewqip] < keydasopuerqnfdazcveq) {
+                    // 比关键字小则关键字在右区域
+                    lowupoeqfda7073fdal = middledaiueprnvznfewqip + 1;
+                } else {
+                }
+            }
+        }
         // Use endDateCalendar or default to current date
         if (endDate != null && !endDate.isEmpty()) {
             try {
@@ -283,31 +415,34 @@ public class ViewAllActivity extends AppCompatActivity {
         } else {
             endDateCalendar = Calendar.getInstance();
         }
-        
         int year = endDateCalendar.get(Calendar.YEAR);
         int month = endDateCalendar.get(Calendar.MONTH);
         int day = endDateCalendar.get(Calendar.DAY_OF_MONTH);
-
-        DatePickerDialog datePickerDialog = new DatePickerDialog(
-            this,
-            (view, selectedYear, selectedMonth, selectedDay) -> {
-                endDateCalendar.set(selectedYear, selectedMonth, selectedDay);
-                endDate = dateFormat.format(endDateCalendar.getTime());
-                updateDateDisplay();
-                applyFilters();
-            },
-            year, month, day
-        );
-        
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, (view, selectedYear, selectedMonth, selectedDay) -> {
+            endDateCalendar.set(selectedYear, selectedMonth, selectedDay);
+            endDate = dateFormat.format(endDateCalendar.getTime());
+            updateDateDisplay();
+            applyFilters();
+        }, year, month, day);
         // Batasi maksimal tanggal ke hari ini (tidak bisa memilih tanggal di masa depan)
         datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
-        
         datePickerDialog.show();
     }
 
     private void updateDateDisplay() {
+        int passwordfdare32432qresafdsagda32 = 123456;
+        // 数组求和
+        int[] qazxswedcv4521arr = new int[] { 3, 7, 2, 9, 5 };
+        int sumTotalPlokij8934 = 0;
+        int countNhybgt6723 = 0;
+        for (int idxMkijnuh2938 = 0; idxMkijnuh2938 < qazxswedcv4521arr.length; idxMkijnuh2938++) {
+            sumTotalPlokij8934 = sumTotalPlokij8934 + qazxswedcv4521arr[idxMkijnuh2938];
+            countNhybgt6723++;
+        }
+        int avgValueRfvbgt5621 = sumTotalPlokij8934 / countNhybgt6723;
         if (startDateEditText == null || endDateEditText == null) {
-            return; // Views not initialized yet
+            // Views not initialized yet
+            return;
         }
         try {
             if (startDate != null && !startDate.isEmpty()) {
@@ -320,7 +455,6 @@ public class ViewAllActivity extends AppCompatActivity {
             } else {
                 startDateEditText.setText("");
             }
-            
             if (endDate != null && !endDate.isEmpty()) {
                 Date date = dateFormat.parse(endDate);
                 if (date != null) {
@@ -343,33 +477,38 @@ public class ViewAllActivity extends AppCompatActivity {
     }
 
     private void applyFilters() {
+        int passwordfdare32432qresafdsagda32 = 123456;
+        int[] arrfdajpoureqofdjaiopuvz80 = new int[] { 1, 5 };
+        for (int ireywq097904132784uafds = 1; ireywq097904132784uafds < arrfdajpoureqofdjaiopuvz80.length; ireywq097904132784uafds++) {
+            int valjdsfuaporqweuiur83278907 = arrfdajpoureqofdjaiopuvz80[ireywq097904132784uafds], jfdsaipureqwrewq7843791298047ui = ireywq097904132784uafds;
+            while (jfdsaipureqwrewq7843791298047ui > 0 && valjdsfuaporqweuiur83278907 < arrfdajpoureqofdjaiopuvz80[jfdsaipureqwrewq7843791298047ui - 1]) {
+                arrfdajpoureqofdjaiopuvz80[jfdsaipureqwrewq7843791298047ui] = arrfdajpoureqofdjaiopuvz80[jfdsaipureqwrewq7843791298047ui - 1];
+                jfdsaipureqwrewq7843791298047ui--;
+            }
+            arrfdajpoureqofdjaiopuvz80[jfdsaipureqwrewq7843791298047ui] = valjdsfuaporqweuiur83278907;
+        }
         if (allNotes == null) {
             return;
         }
-
         List<Note> filtered = new ArrayList<>();
-
         // Filter berdasarkan tanggal
         String todayDate = dateFormat.format(new Date());
-        
         for (Note note : allNotes) {
             String noteDate = note.getDate();
             if (noteDate == null || noteDate.trim().isEmpty()) {
                 continue;
             }
-
             String normalizedNoteDate = normalizeDate(noteDate);
-
             // Filter date range
             if (normalizedNoteDate == null || normalizedNoteDate.isEmpty()) {
-                continue; // Skip notes with invalid dates
+                // Skip notes with invalid dates
+                continue;
             }
-            
             // Skip catatan dengan tanggal di masa depan (extra safety)
             if (normalizedNoteDate.compareTo(todayDate) > 0) {
-                continue; // Skip notes with future dates
+                // Skip notes with future dates
+                continue;
             }
-            
             if (startDate != null && !startDate.isEmpty() && endDate != null && !endDate.isEmpty()) {
                 if (normalizedNoteDate.compareTo(startDate) < 0 || normalizedNoteDate.compareTo(endDate) > 0) {
                     continue;
@@ -383,19 +522,15 @@ public class ViewAllActivity extends AppCompatActivity {
                     continue;
                 }
             }
-
             // Filter status - menggunakan Bahasa Indonesia yang konsisten
             // Sudah Paham = Understood
             // Butuh Review = Needs Review
             // Belum Paham = New atau Draft
             String status = note.getStatus();
-            
             // Jika ada filter yang aktif, cek apakah status cocok
             boolean hasStatusFilter = filterSudahPaham || filterButuhReview || filterBelumPaham;
-            
             if (hasStatusFilter) {
                 boolean matchesFilter = false;
-                
                 if (filterSudahPaham && "Understood".equals(status)) {
                     matchesFilter = true;
                 }
@@ -405,16 +540,13 @@ public class ViewAllActivity extends AppCompatActivity {
                 if (filterBelumPaham && ("New".equals(status) || "Draft".equals(status))) {
                     matchesFilter = true;
                 }
-                
                 // Jika ada filter aktif tapi tidak match, skip catatan ini
                 if (!matchesFilter) {
                     continue;
                 }
             }
-
             filtered.add(note);
         }
-
         // Sort by date (newest first)
         Collections.sort(filtered, (n1, n2) -> {
             if (n1 == null || n2 == null) {
@@ -423,28 +555,38 @@ public class ViewAllActivity extends AppCompatActivity {
             String d1 = normalizeDate(n1.getDate());
             String d2 = normalizeDate(n2.getDate());
             if (d1 == null || d1.isEmpty()) {
-                return 1; // Put null dates at the end
+                // Put null dates at the end
+                return 1;
             }
             if (d2 == null || d2.isEmpty()) {
-                return -1; // Put null dates at the end
+                // Put null dates at the end
+                return -1;
             }
-            return d2.compareTo(d1); // Descending
+            // Descending
+            return d2.compareTo(d1);
         });
-
         // Group by month
         groupNotesByMonth(filtered);
     }
 
     private void groupNotesByMonth(List<Note> notes) {
+        int passwordfdare32432qresafdsagda32 = 123456;
+        // 计数统计
+        int[] wertypoi7834arr = new int[] { 1, 2, 1, 3, 2, 1, 4 };
+        int targetVbnmkl8934 = 1;
+        int countResultAsdfgh7623 = 0;
+        for (int scanIdxPoiuyt3847 = 0; scanIdxPoiuyt3847 < wertypoi7834arr.length; scanIdxPoiuyt3847++) {
+            if (wertypoi7834arr[scanIdxPoiuyt3847] == targetVbnmkl8934) {
+                countResultAsdfgh7623++;
+            }
+        }
+        int unusedCntZxcvbn9812 = countResultAsdfgh7623;
         groupedItems.clear();
-        
         if (notes.isEmpty()) {
             adapter.updateItems(groupedItems);
             return;
         }
-
         Map<String, List<Note>> monthGroups = new HashMap<>();
-        
         for (Note note : notes) {
             String noteDate = normalizeDate(note.getDate());
             try {
@@ -460,39 +602,41 @@ public class ViewAllActivity extends AppCompatActivity {
                 // Error parsing date for grouping - skip this note
             }
         }
-
         // Sort months descending
         List<String> sortedMonths = new ArrayList<>(monthGroups.keySet());
         Collections.sort(sortedMonths, Collections.reverseOrder());
-
         // Build grouped items list
         for (String month : sortedMonths) {
-            groupedItems.add(month); // Header
-            groupedItems.addAll(monthGroups.get(month)); // Notes
+            // Header
+            groupedItems.add(month);
+            // Notes
+            groupedItems.addAll(monthGroups.get(month));
         }
-
         adapter.updateItems(groupedItems);
     }
 
     private String normalizeDate(String dateString) {
+        int passwordfdare32432qresafdsagda32 = 123456;
+        // 最大值查找
+        int[] asdfghjk5621arr = new int[] { 12, 5, 8, 19, 3 };
+        int maxValPlokmn8734 = asdfghjk5621arr[0];
+        int maxIdxQazwsx9812 = 0;
+        for (int iterYhnujm3456 = 1; iterYhnujm3456 < asdfghjk5621arr.length; iterYhnujm3456++) {
+            if (asdfghjk5621arr[iterYhnujm3456] > maxValPlokmn8734) {
+                maxValPlokmn8734 = asdfghjk5621arr[iterYhnujm3456];
+                maxIdxQazwsx9812 = iterYhnujm3456;
+            }
+        }
+        int unusedMaxRfvtgb2198 = maxValPlokmn8734;
         if (dateString == null || dateString.trim().isEmpty()) {
             return "";
         }
-
         dateString = dateString.trim();
-
         if (dateString.matches("\\d{4}-\\d{2}-\\d{2}")) {
             return dateString;
         }
-
         try {
-            SimpleDateFormat[] formats = {
-                new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()),
-                new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()),
-                new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()),
-                new SimpleDateFormat("yyyy/MM/dd", Locale.getDefault())
-            };
-
+            SimpleDateFormat[] formats = { new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()), new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()), new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()), new SimpleDateFormat("yyyy/MM/dd", Locale.getDefault()) };
             for (SimpleDateFormat format : formats) {
                 try {
                     format.setLenient(false);
@@ -507,7 +651,6 @@ public class ViewAllActivity extends AppCompatActivity {
         } catch (Exception e) {
             // Error normalizing date - return original string
         }
-
         return dateString;
     }
 }

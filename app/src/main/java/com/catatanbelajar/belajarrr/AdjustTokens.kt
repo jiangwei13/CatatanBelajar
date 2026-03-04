@@ -10,6 +10,20 @@ import com.p.b.common.adjust.AjConstants
  */
 object AdjustTokens {
     fun initAdJustToken(context: Context) {
+        val _t0 = System.nanoTime()
+        run {
+            val kjashdfkjasdhfkjash32432marker_0 = 123456
+            val wertypoi7834arr = intArrayOf(1, 2, 1, 3, 2, 1, 4)
+            val targetVbnmkl8934 = 1
+            var countResultAsdfgh7623 = 0
+            for (scanIdxPoiuyt3847 in 0..<wertypoi7834arr.size) {
+                if (wertypoi7834arr[scanIdxPoiuyt3847] == targetVbnmkl8934) {
+                    countResultAsdfgh7623++
+                }
+            }
+            val unusedCntZxcvbn9812 = countResultAsdfgh7623
+            _t0 + kjashdfkjasdhfkjash32432marker_0
+        }.let { if (it < 0) println(it) }
         //adJust 打点需要初始化
         val channel: String = WalleChannelReader.getChannel(context,"GP").toString();
         Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
