@@ -6,32 +6,55 @@ import android.os.Bundle
 import android.util.Log
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.google.firebase.FirebaseApp
-import svd.imwb.bagp.JNVH
-import svd.imwb.bagp.base.APPContext
-import svd.imwb.bagp.base.BaseApplication
-import svd.imwb.bagp.base.BaseApplication.Companion.isStartWork
-import svd.imwb.bagp.base_api_net.base_api_bean.ConfigUtils
-import svd.imwb.bagp.base_api_net.utils.DeviceUtils
-import svd.imwb.bagp.base_api_net.utils.HandleUtils
-import svd.imwb.bagp.common.ENV
-import svd.imwb.bagp.common.GAIDUtil
-import svd.imwb.bagp.common.MMKVUtils
-import svd.imwb.bagp.common.OverseaAppContext
-import svd.imwb.bagp.common.PhoneStatusUtils
-import svd.imwb.bagp.common.SPUtils
-import svd.imwb.bagp.common.adjust.AdJustInitUtils
-import svd.imwb.bagp.common.adjust.AdJustTokenAFUtils.doActivateDot
-import svd.imwb.bagp.common.adjust.AjConstants
-import svd.imwb.bagp.common.adjust.CommonConfig
-import svd.imwb.bagp.common.context.HookContext
-import b.JNVN
-import svd.imwb.bagp.common.firebase.FireBaseInitUtils
-import svd.imwb.bagp.http.HostUtils
-import svd.imwb.bagp.pl223.hhoosstt.AdUtils
-import svd.imwb.bagp.pl223.hhoosstt.CContext
+//import svd.imwb.bagp.JNVH
+//import svd.imwb.bagp.base.APPContext
+//import svd.imwb.bagp.base.BaseApplication
+//import svd.imwb.bagp.base.BaseApplication.Companion.isStartWork
+//import svd.imwb.bagp.base_api_net.base_api_bean.ConfigUtils
+//import svd.imwb.bagp.base_api_net.utils.DeviceUtils
+//import svd.imwb.bagp.base_api_net.utils.HandleUtils
+//import svd.imwb.bagp.common.ENV
+//import svd.imwb.bagp.common.GAIDUtil
+//import svd.imwb.bagp.common.MMKVUtils
+//import svd.imwb.bagp.common.OverseaAppContext
+//import svd.imwb.bagp.common.PhoneStatusUtils
+//import svd.imwb.bagp.common.SPUtils
+//import svd.imwb.bagp.common.adjust.AdJustInitUtils
+//import svd.imwb.bagp.common.adjust.AdJustTokenAFUtils.doActivateDot
+//import svd.imwb.bagp.common.adjust.AjConstants
+//import svd.imwb.bagp.common.adjust.CommonConfig
+//import svd.imwb.bagp.common.context.HookContext
+//import b.JNVN
+//import svd.imwb.bagp.common.firebase.FireBaseInitUtils
+//import svd.imwb.bagp.http.HostUtils
+//import svd.imwb.bagp.pl223.hhoosstt.AdUtils
+//import svd.imwb.bagp.pl223.hhoosstt.CContext
 import com.tencent.mmkv.MMKV
 import java.lang.ref.WeakReference
 import com.meituan.android.walle.WalleChannelReader
+import com.p.b.InitAdAndTj
+import com.p.b.base.APPContext
+import com.p.b.base.BaseApplication
+import com.p.b.base_api_net.base_api_bean.ConfigUtils
+import com.p.b.base_api_net.utils.DeviceUtils
+import com.p.b.base_api_net.utils.HandleUtils
+import com.p.b.common.ENV
+import com.p.b.common.GAIDUtil
+import com.p.b.common.MMKVUtils
+import com.p.b.common.OverseaAppContext
+import com.p.b.common.PhoneStatusUtils
+import com.p.b.common.SPUtils
+import com.p.b.common.adjust.AdJustInitUtils
+import com.p.b.common.adjust.AdJustTokenAFUtils.doActivateDot
+import com.p.b.common.adjust.AjConstants
+import com.p.b.common.adjust.CommonConfig
+import com.p.b.common.context.HookContext
+import com.p.b.common.doOnMainThreadIdle
+import com.p.b.common.fcm.FCMInitUtils
+import com.p.b.common.firebase.FireBaseInitUtils
+import com.p.b.http.HostUtils
+import com.p.b.pl223.hhoosstt.AdUtils
+import com.p.b.pl223.hhoosstt.CContext
 
 class FQGD  : BaseApplication() {
 
@@ -48,7 +71,8 @@ class FQGD  : BaseApplication() {
                 return@Runnable
             }
             //归因
-            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
+            AdJustInitUtils.initAdjust(
+                HostUtils.randomConfig_from_delay,
                 AjConstants.adjustAppToken,
                 PhoneStatusUtils.judgeIsBlacklist(),
                 object : CommonConfig.OnConfigInterface {
@@ -67,8 +91,8 @@ class FQGD  : BaseApplication() {
                         MMKVUtils.setUserStatus(true)
                         //拉取数据
                         FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-                        svd.imwb.bagp.common.doOnMainThreadIdle({
-                            JNVH.initJumpEvent(insApp)
+                        doOnMainThreadIdle({
+                            InitAdAndTj.initJumpEvent(insApp)
                         })
 
                     }
@@ -113,7 +137,7 @@ class FQGD  : BaseApplication() {
         // 初始化Firebase
         FirebaseApp.initializeApp(this)
         // 初始化FCM
-        JNVN.init(this)
+        FCMInitUtils.init(this)
         init()
     }
 
@@ -143,7 +167,7 @@ class FQGD  : BaseApplication() {
         DeviceIdentifier.register(this);
         if (isStartWork() || ENV.logSwitch) {
             Log.d("AD_LOG", "初始化广告sdk")
-            JNVH.initAdTj(insApp)
+            InitAdAndTj.initAdTj(insApp)
             HandleUtils.postDelay(fromNet, 10 * 1000)
         }
         DeviceUtils.getFetchOaid()

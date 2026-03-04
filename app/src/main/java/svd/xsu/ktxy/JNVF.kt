@@ -3,9 +3,12 @@ package svd.xsu.ktxy
 import android.app.Activity
 import android.util.Log
 import androidx.lifecycle.LifecycleOwner
-import svd.imwb.bagp.master.scope.AdParams
-import svd.imwb.bagp.master.view.AutoConfigAdViewScope
-import svd.imwb.bagp.master.view.ScopeFinishListener
+import com.p.b.master.scope.AdParams
+import com.p.b.master.view.AutoConfigAdViewScope
+import com.p.b.master.view.ScopeFinishListener
+//import svd.imwb.bagp.master.scope.AdParams
+//import svd.imwb.bagp.master.view.AutoConfigAdViewScope
+//import svd.imwb.bagp.master.view.ScopeFinishListener
 import java.lang.ref.WeakReference
 
 /**

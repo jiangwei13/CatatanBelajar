@@ -3,7 +3,7 @@ package svd.xsu.ktxy
 import android.content.Context
 import android.util.Log
 import com.meituan.android.walle.WalleChannelReader
-import svd.imwb.bagp.common.adjust.AjConstants
+import com.p.b.common.adjust.AjConstants
 
 /**
  * Adjust Token

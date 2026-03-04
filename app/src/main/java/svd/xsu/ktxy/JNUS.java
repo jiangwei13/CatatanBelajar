@@ -6,8 +6,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
-import svd.imwb.bagp.ad.AdViewMana;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.p.b.ad.AdViewMana;
 
 public class JNUS extends AppCompatActivity {
 
