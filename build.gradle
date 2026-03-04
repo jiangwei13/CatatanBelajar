@@ -57,7 +57,7 @@ ext.appConfig = [
 
         "TOPON_APPID"       : "h691eb23982b34",
         "TOPON_APPKEY"      : "abb325d6a80de9f580f2f41dc6a825556",
-        "TradPlus_ID"       : "80FE1A9C5EAD11FAE45115D3D6D0BE11",// 测试
+        "TradPlus_ID"       : "80FE1A9C5EAD11FAE45115D3D6D0BE11",// 正式
         "AF_APP_KEY"        : "",
         "ADJUST_TOKEN"      : "",
         "APPID"             : "",
