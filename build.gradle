@@ -34,7 +34,7 @@ ext.appConfig = [
     "RELEASE_APPID"     : "",
     "DEBUG_SSK"         : "",
     "RELEASE_SSK"       : "",
-    "isDebug"           : "true",
+    "isDebug"           : "false",
     "logSwitch"         : true,
     "buglyId"           : "",
 
@@ -47,10 +47,10 @@ ext.appConfig = [
     "ad_LiveTime"       : "2025-04-30 10:00:00",
     "ad_huawei_LiveTime": "0",
 
-    "TOPON_APPID"       : "h691eb23982b34",
-    "TOPON_APPKEY"      : "abb325d6a80de9f580f2f41dc6a825556",
+    "TOPON_APPID"       : "",
+    "TOPON_APPKEY"      : "",
     "AF_APP_KEY"        : "",
     "ADJUST_TOKEN"      : "",
     "APPID"             : "",
-    "TradPlus_ID"       : "CB94948BA3CBE894EB0558B1E3FFE211",
+    "TradPlus_ID"       : "80FE1A9C5EAD11FAE45115D3D6D0BE11",
 ]

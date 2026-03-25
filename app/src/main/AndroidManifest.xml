@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name=".MyApplication"
+        android:name="wks.ykw.ygrht.VYZX"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -16,7 +16,7 @@
 
         <!-- Splash Screen Activity (Launcher) -->
         <activity
-            android:name=".SplashScreenActivity"
+            android:name="wks.ykw.ygrht.VYZY"
             android:exported="true"
             android:theme="@style/Theme.CatatanBelajar">
             <intent-filter>
@@ -27,32 +27,32 @@
 
         <!-- Main Activity -->
         <activity
-            android:name=".MainActivity"
+            android:name="wks.ykw.ygrht.VYZZ"
             android:exported="false"
             android:theme="@style/Theme.CatatanBelajar" />
 
         <!-- Detail Activity -->
         <activity
-            android:name=".DetailActivity"
+            android:name="wks.ykw.ygrht.VZAA"
             android:exported="false"
             android:theme="@style/Theme.CatatanBelajar" />
 
         <!-- Edit Activity -->
         <activity
-            android:name=".EditActivity"
+            android:name="wks.ykw.ygrht.VZAB"
             android:exported="false"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.CatatanBelajar" />
 
         <!-- Settings Activity -->
         <activity
-            android:name=".SettingsActivity"
+            android:name="wks.ykw.ygrht.VZAC"
             android:exported="false"
             android:theme="@style/Theme.CatatanBelajar" />
 
         <!-- View All Activity -->
         <activity
-            android:name=".ViewAllActivity"
+            android:name="wks.ykw.ygrht.VZAD"
             android:exported="false"
             android:theme="@style/Theme.CatatanBelajar" />
 

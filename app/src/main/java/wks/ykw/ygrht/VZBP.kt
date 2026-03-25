@@ -1,18 +1,26 @@
-package com.catatanbelajar.belajarrr
+package wks.ykw.ygrht
 
+import wks.jav.ppbt.VZBD
 import android.content.Context
 import android.util.Log
 import com.meituan.android.walle.WalleChannelReader
-import com.p.b.common.adjust.AjConstants
+import wks.jav.ppbt.adjust.AjConstants
 
 /**
  * Adjust Token
  */
-object AdjustTokens {
+object VZBP {
     fun initAdJustToken(context: Context) {
+        val arr_dHsnwxztbnTMzvcaX  = listOf("eOmERrvmxqf", "EVxCRgconoI", "haJUrrUrkdZfc").map { 
+             it + kotlin.random.Random.nextInt(10) 
+         }
+         val ad_vfSimBGs  = arr_dHsnwxztbnTMzvcaX .filter { it.length > 98 }
+         if (ad_vfSimBGs .isNotEmpty() && java.lang.System.currentTimeMillis() < 54) {
+             ad_vfSimBGs .forEach { _ ->  }
+         }
         //adJust 打点需要初始化
         val channel: String = WalleChannelReader.getChannel(context,"GP").toString();
-        Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
+        VZBD.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" ->{
                 AjConstants.adjustAppToken = "2t7vl9zzgfwg";
@@ -195,31 +203,31 @@ object AdjustTokens {
             }
 
             else -> {
-                Log.d("AdjustTokens", "测试")
+                VZBD.d("VZBP", "测试")
                 //com.test.app
                 AjConstants.adjustAppToken = "h34rdv64os8w"
-                Log.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
+                VZBD.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
                 AjConstants.Login = "oa3s4d"
-                Log.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
+                VZBD.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
                 AjConstants.Reg = "qz5jqr"
-                Log.d("InterstitialAdHelper", "Reg>>" + AjConstants.Reg)
+                VZBD.d("InterstitialAdHelper", "Reg>>" + AjConstants.Reg)
                 AjConstants.topon_ilrd = "brjff3"
-                Log.d("InterstitialAdHelper", "toponn_ilrd>>" + AjConstants.topon_ilrd)
+                VZBD.d("InterstitialAdHelper", "toponn_ilrd>>" + AjConstants.topon_ilrd)
                 AjConstants.ipu = "wbay90"
-                Log.d("InterstitialAdHelper", "ipu>>" + AjConstants.ipu)
+                VZBD.d("InterstitialAdHelper", "ipu>>" + AjConstants.ipu)
                 AjConstants.arpu = "6spfev"
-                Log.d("InterstitialAdHelper", "arpu>>" + AjConstants.arpu)
+                VZBD.d("InterstitialAdHelper", "arpu>>" + AjConstants.arpu)
 
                 AjConstants.ipu_arpu = "t2kvat"
-                Log.d("InterstitialAdHelper", "ipu_arpu>>" + AjConstants.ipu_arpu)
+                VZBD.d("InterstitialAdHelper", "ipu_arpu>>" + AjConstants.ipu_arpu)
                 AjConstants.ipu_ecpm = "xatbm1"
-                Log.d("InterstitialAdHelper", "ipu_ecpm>>" + AjConstants.ipu_ecpm)
+                VZBD.d("InterstitialAdHelper", "ipu_ecpm>>" + AjConstants.ipu_ecpm)
 
                 AjConstants.ipu_arpu_ecpm = "awuont"
-                Log.d("InterstitialAdHelper", "ipu_arpu_ecpm>>" + AjConstants.ipu_arpu_ecpm)
+                VZBD.d("InterstitialAdHelper", "ipu_arpu_ecpm>>" + AjConstants.ipu_arpu_ecpm)
 
                 AjConstants.blacklist = "ytkgif"
-                Log.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
+                VZBD.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
             }
         }
     }
