@@ -14,7 +14,7 @@ apply plugin: 'xml-class-guard'
 apply plugin: 'android-junk-code'
 apply plugin: 'stringfog'
 
-apply from: "../build_tools/jiagu/jiagu.gradle"
+apply from: "../../third-module/build_tools/jiagu/jiagu.gradle"
 
 
 
@@ -41,21 +41,21 @@ xmlClassGuard {
 
 // 加入dex混淆配置
 BlackObfuscator {
-    // 是否启用
-    enabled true
+    // 仅 release 构建时启用
+    enabled gradle.startParameter.taskNames.any { it.toLowerCase().contains("release") }
     // 混淆深度
     depth 2
-    // 需要混淆的包或者类(匹配前面一段)
-    obfClass = ["ai.pgr", "b125.ztm",
-                "com.tencent.mm.plugin.tter",
-                "com.tencent.mm.plugin.out",
-                "com.yao.tool",
-                "com.ad.base_ad_library",
-                "com.ad.base_ad_factory",
-                "com.clean.base_ad_common_library",
-                "com.jlhb.g.ad", "com.service.activitys",
-                "com.tools.box"
-    ]
+    // xmlClassGuard/packageChange 产出的映射，供本地插件回填原始/变更后的包名前缀
+    mappingFile = file("xml-class-mapping.txt")
+    // Kotlin object/companion 的静态初始化对 verifier 很敏感，dex 级变换默认跳过这些结构
+    skipStaticInitializer true
+    skipKotlinSynthetic true
+    skipKotlinSingletonLikeClasses true
+    skipInnerClasses true
+    skipAndroidComponents false
+    skipCallbackLikeClasses true
+    // 这里只是候选包前缀，最终是否进入 dex 控制流混淆还会经过 Kotlin 安全过滤
+    obfClass = []
 
     // blackClass中的包或者类不会进行混淆(匹配前面一段)
     blackClass = ["top.niunaijun.black"]
@@ -89,7 +89,7 @@ stringfog {
     enable true
     debug false
     // 指定加解密的具体实现类，buildSrc中和app中均要包含此实现源文件
-    implementation 'com.p.b.CustomStringFogImpl'
+    implementation 'com.stringfog.impl.CustomStringFogImpl'
     // 指定需加密的代码包路径，可配置多个，未指定将默认全部加密
 //    fogPackages = ["com.p.b"]
     // 4.0版本新增：使用自定义密钥生成器
@@ -105,7 +105,7 @@ android {
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.catatanbelajar.belajarrr2"
+        applicationId "com.saowen.magicdoc"
         minSdk 25
         targetSdk 35
         versionCode rootProject.ext.appConfig.VERSIONCODE
@@ -179,4 +179,6 @@ dependencies {
 
     implementation 'com.github.megatronking.stringfog:interface:5.0.0'
     implementation 'com.github.megatronking.stringfog:xor:5.0.0'
+
+    api project(':aar_library:aar_name')
 }

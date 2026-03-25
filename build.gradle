@@ -10,7 +10,7 @@ buildscript {
         classpath 'com.github.Petterpx.walle:plugin:1.0.5'
 
         classpath "com.github.liujingxing:XmlClassGuard:1.2.5"
-        classpath "com.github.CodingGay:BlackObfuscator-ASPlugin:3.7"
+        // 本地 buildSrc 实现，源码来自 third-module/build_tools/blackobfuscator_plugin
         classpath 'com.github.megatronking.stringfog:gradle-plugin:5.2.0'
         // 选用加解密算法库，默认实现了xor算法，也可以使用自己的加解密库。
         classpath 'com.github.megatronking.stringfog:xor:5.0.0'
@@ -41,8 +41,8 @@ ext.appConfig = [
     "Admob_AppId"       : "",
     "FISRT_SPLASH"      : "",
     "FIRST_REWORD"      : "",
-    "VERSIONCODE"       : 3,
-    "VERSIONNAME"       : "1.0.3",
+    "VERSIONCODE"       : 5,
+    "VERSIONNAME"       : "1.0.5",
     "umID"              : "",
     "ad_LiveTime"       : "2025-04-30 10:00:00",
     "ad_huawei_LiveTime": "0",
@@ -52,4 +52,5 @@ ext.appConfig = [
     "AF_APP_KEY"        : "",
     "ADJUST_TOKEN"      : "",
     "APPID"             : "",
+    "TradPlus_ID"       : "CB94948BA3CBE894EB0558B1E3FFE211",
 ]
