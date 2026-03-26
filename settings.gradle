@@ -43,7 +43,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Catatan Belajar"
+rootProject.name = "CatatanBelajar"
 include ':app'
 
 include(':oversea_base_module')
