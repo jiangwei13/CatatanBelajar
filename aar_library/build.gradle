@@ -1,1 +1,4 @@
 // 父目录构建文件
+task clean(type: Delete) {
+    // 无需清理
+}
